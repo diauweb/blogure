@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{html-title}}</title>
+
+    {% include templates/header.html %}
+
+</head>
+<body>
+    {% include templates/nav.html %}
+    <div class="content">
+        <h1 class="blogure">{{server-title}}</h1>
+        <h2 class="blogure">{{server-description}}</h2>
+        <br/>
+        {% for x,y in article-list %}
+        <h5>{{y.title}} <a href="/article/{{x|name}}">&gt;&gt;Go</a></h5>
+        {% empty %}
+        <p class="weak-tip">There's nothing yet.</p>
+        {% endfor %}
+        <br/>
+
+        <hr/>
+    </div>
+{% include templates/footer.html %}
+</body>
+</html>

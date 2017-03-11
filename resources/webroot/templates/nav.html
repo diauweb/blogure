@@ -1,0 +1,15 @@
+<div class="header">
+    <div class="container">
+        <img id="logo" src="/static/image/logo@40px.png">
+        <ul class="navbar-list">
+            {% for x in custom-nav %}
+            {% ifequal x.id sel %}
+            <li class="sel"><a href="{{x.path}}">{{x.name}}</a></li>
+            {% else %}
+            <li><a href="{{x.path}}">{{x.name}}</a></li>
+            {% endifequal %}
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>

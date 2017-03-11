@@ -1,0 +1,19 @@
+/* The main configuration file of Blogure. */
+{
+  "host": "localhost",
+  "port": 8080,
+
+  "iis-disguise": true,
+
+  /* Pervent leaking sth to outside. */
+  /* Things inside is not important. */
+  "site-cfg":{
+
+    "server-title": "Hello Blogure!",
+
+    "server-description": "Just another Blogure site.",
+
+    "html-title": "A Blogure Blog"
+  }
+
+}
