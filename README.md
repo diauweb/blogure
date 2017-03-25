@@ -16,6 +16,7 @@ A standard Java web server, like Tomcat or something.
 ### To directly run via clj source files
 
 You will need [Leiningen][] 2.0.0 or above installed.
+
 [leiningen]: https://github.com/technomancy/leiningen
 
 ## Running
