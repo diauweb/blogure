@@ -1,17 +1,17 @@
 /* The main configuration file of Blogure. */
 {
+  "_CFG_VERSION": 37.1443,
+
   "host": "localhost",
   "port": 8080,
 
+  /* Useless now. */
   "iis-disguise": true,
 
   /* Pervent leaking sth to outside. */
   "site-cfg":{
-
     "server-title": "Hello Blogure!",
-
     "server-description": "Just another Blogure site.",
-
     "html-title": "A Blogure Blog"
   },
 

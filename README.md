@@ -1,19 +1,39 @@
-# blogure
+# Blogure
 
-FIXME
+Blogure is a open-source blogging system written in Clojure. It is designed for out-of-box experience.
+It has no database needed, and can be compiled into a single file.
+
+Run it, with no configure but just Java Runtime Enviornment and love :)
 
 ## Prerequisites
 
-You will need [Leiningen][] 2.0.0 or above installed.
+### To use it via a compiled jar version
+Nothing.
 
+### To use it via a compiled war
+A standard Java web server, like Tomcat or something.
+
+### To directly run via clj source files
+
+You will need [Leiningen][] 2.0.0 or above installed.
 [leiningen]: https://github.com/technomancy/leiningen
 
 ## Running
 
-To start a web server for the application, run:
+To run it, download latest standalone jar from releases, and 
+~~~
+java -jar (jarfile).jar 
+~~~
 
-    lein ring server
+If you would like run from code,
+cd to the folder, and
+~~~
+lein run
+~~~
+
+Then just enjoy it.
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright © 2017 Xiaodai Studio.
+You can redistribute and modify this as you like, but no commerical use.
