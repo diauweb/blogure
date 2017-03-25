@@ -1,6 +1,6 @@
-(defproject blogure "0.5.0"
-  :description "A Clojure non-database blog."
-  :url "n"
+(defproject blogure "1.0.0"
+  :description "A Clojure blog."
+  :url "zuodiedai.space"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [ring/ring-core "1.5.0"]

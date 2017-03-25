@@ -12,7 +12,7 @@
             [xiaodai.blogure.article :as article])
   (:import (java.util Date)))
 
-(def ^:const version "0.6.1 b170311-A")
+(def ^:const version "1.0.0 b170325-A")
 
 (log/info (str "Blogure, version" version))
 (log/info (str "#### Xiaodai Present ####"))
