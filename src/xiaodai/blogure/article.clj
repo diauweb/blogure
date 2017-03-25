@@ -14,6 +14,10 @@
 (def page-cache (atom []))
 (def ^:const metapath "articles/metadata.json")
 
+(when-not (.exists (io/file metapath))
+  (io/make-parents (io/file metapath))
+  (spit metapath "{}"))
+
 ;; The private things ;;
 
 (defn- no-prefix [^String name]
@@ -68,6 +72,7 @@
 
 (defn flush-cache []
   (log/info "Flushing Cache.. That may take a while.")
+  (reset! page-cache [])
   (doseq [[k v] (read-meta)]
     (swap! page-cache conj
            (ArticleCacheItem. (name k) (:title v) (:timestamp v) (future (get-summary (name k))))))

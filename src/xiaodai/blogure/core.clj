@@ -9,10 +9,13 @@
             [ring.middleware.not-modified :as not-modified]
             [xiaodai.blogure.config :as cfg]
             [xiaodai.blogure.route :as r]
-            [xiaodai.blogure.article :as article])
-  (:import (java.util Date)))
+            [xiaodai.blogure.article :as article]
+            [clojure.java.io :as io])
+  (:import (java.util Date)
+           (java.io File))
+  (:gen-class))
 
-(def ^:const version "1.0.0 b170325-A")
+(def ^:const version "1.0.2 b170325-C")
 
 (log/info (str "Blogure, version" version))
 (log/info (str "#### Xiaodai Present ####"))

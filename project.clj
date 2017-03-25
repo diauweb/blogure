@@ -1,4 +1,4 @@
-(defproject blogure "1.0.0"
+(defproject blogure "1.0.2"
   :description "A Clojure blog."
   :url "zuodiedai.space"
   :min-lein-version "2.0.0"
@@ -12,4 +12,5 @@
                  [markdown-clj "0.9.97"]]
   :plugins [[lein-ring "0.9.7"]]
   :main xiaodai.blogure.core
-  :ring {:handler xiaodai.blogure.core/app})
+  :ring {:handler xiaodai.blogure.core/app}
+  :aot [xiaodai.blogure.core])
