@@ -1,2 +1,10 @@
-{"hello":{"title":"Hello World"},
- "test":{"title":"World Hello"}}
+{
+  "hello": {
+    "timestamp": 1489222315000,
+    "title": "Hello World!"
+  },
+  "test": {
+    "timestamp": 1488699732000,
+    "title": "This is the test article!"
+  }
+}

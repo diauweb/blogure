@@ -9,7 +9,8 @@
             [ring.middleware.not-modified :as not-modified]
             [xiaodai.blogure.config :as cfg]
             [xiaodai.blogure.route :as r]
-            [xiaodai.blogure.article :as article]))
+            [xiaodai.blogure.article :as article])
+  (:import (java.util Date)))
 
 (def ^:const version "0.6.1 b170311-A")
 
@@ -38,6 +39,8 @@
 (selmer.parser/add-tag! :blogure-version
                         (fn [& x] version))
 
+(selmer.filters/add-filter! :deref #(deref %))
+
 ; TODO Remove after development
 (selmer.parser/cache-off!)
 
@@ -49,6 +52,7 @@
         port (:port cfg)]
     (reset! server (jetty/run-jetty app {:host host :port port}))))
 
-#_(article/update-all-meta!)
+(article/add-new-meta!)
+(article/flush-cache)
 
 (defn -main [] (start-server))

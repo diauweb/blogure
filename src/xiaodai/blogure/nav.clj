@@ -1,10 +1,10 @@
-(ns xiaodai.blogure.nav)
+(ns xiaodai.blogure.nav
+  (:require [xiaodai.blogure.config :as cfg]))
 
-(defrecord Nav [id name path])
+(defrecord Nav [order name path])
 
 (def ^:private default-nav
-  [(Nav. 0 "主页" "/")
-   (Nav. 1 "文章" "/article")
-   (Nav. 2 "测试" "http://baidu.com")])
+  [(Nav. -2 "主页" "/")
+   (Nav. -1 "文章" "#")])
 
-(defn get-nav [] default-nav)
+(defn get-nav [] (into default-nav (-> "cfg/main.cfg.json" cfg/read-cfg :custom-tab)))

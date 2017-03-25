@@ -6,7 +6,6 @@
   "iis-disguise": true,
 
   /* Pervent leaking sth to outside. */
-  /* Things inside is not important. */
   "site-cfg":{
 
     "server-title": "Hello Blogure!",
@@ -14,6 +13,14 @@
     "server-description": "Just another Blogure site.",
 
     "html-title": "A Blogure Blog"
-  }
+  },
+
+  "custom-tab":[
+    {
+      "order": 0,
+      "name": "GitHub",
+      "path": "http://github.com/diauweb"
+    }
+  ]
 
 }

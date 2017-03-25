@@ -13,14 +13,21 @@
         <h1 class="blogure">{{server-title}}</h1>
         <h2 class="blogure">{{server-description}}</h2>
         <br/>
-        {% for x,y in article-list %}
-        <h5>{{y.title}} <a href="/article/{{x|name}}">&gt;&gt;Go</a></h5>
-        {% empty %}
-        <p class="weak-tip">There's nothing yet.</p>
-        {% endfor %}
+        <div class="content-container">
+            {% for x in article-list %}
+            <div class="list-item">
+                <h3>{{x.title}}</h3>
+                <div class="list-item-meta">
+                    <b>时间:</b> {{x.timestamp|date:"yyyy-MM-dd hh:mm:ss"}}
+                </div>
+                {{x.summary|deref}}...
+                <a href="/article/{{x.path}}">&gt;&gt;Go</a>
+            </div>
+            {% empty %}
+            <p class="weak-tip">There's nothing yet.</p>
+            {% endfor %}
+        </div>
         <br/>
-
-        <hr/>
     </div>
 {% include templates/footer.html %}
 </body>

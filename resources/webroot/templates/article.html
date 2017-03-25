@@ -7,8 +7,17 @@
 </head>
 <body>
 {% include templates/nav.html %}
-<div class="content">{{content|safe}}</div>
-<br/><hr/>
+<div class="content">
+    <div class="content-container">
+        <div class="article-info">
+            <h1>{{meta.title}}</h1>
+            <span><b>时间: </b>{{meta.timestamp|date:"yyyy-MM-dd hh:mm:ss"}}</span>
+            <hr/>
+        </div>
+        {{content|safe}}
+    </div>
+</div>
+<br/>
 <span>{% include templates/footer.html %}</span>
 </body>
 </html>
