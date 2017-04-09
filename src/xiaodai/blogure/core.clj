@@ -15,7 +15,7 @@
            (java.io File))
   (:gen-class))
 
-(def ^:const version "1.0.2 b170325-C")
+(def ^:const version "1.0.5 b170409-A")
 
 (log/info (str "Blogure, version" version))
 (log/info (str "#### Xiaodai Present ####"))

@@ -1,4 +1,4 @@
-(defproject blogure "1.0.2"
+(defproject blogure "1.0.5"
   :description "A Clojure blog."
   :url "zuodiedai.space"
   :min-lein-version "2.0.0"

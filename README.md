@@ -1,6 +1,6 @@
 # Blogure
 
-Blogure is a open-source blogging system written in Clojure. It is designed for out-of-box experience.
+Blogure is an open-source blogging system written in Clojure. It is designed for out-of-box experience.
 It has no database needed, and can be compiled into a single file.
 
 Run it, with no configure but just Java Runtime Enviornment and love :)

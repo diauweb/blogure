@@ -3,8 +3,11 @@
             [compojure.route :as route]
             [xiaodai.blogure.article :as article]
             [clojure.java.io :as io]
-            [clojure.tools.logging :as log])
+            [clojure.tools.logging :as log]
+            [ring.middleware.file :as filew])
   (:use [xiaodai.blogure.render]))
+
+(when-not (.exists (io/file "upload")) (.mkdir (io/file "upload")))
 
 (defn- notfound []  (slurp (io/resource "webroot/public/404.html")))
 
@@ -25,4 +28,5 @@
                    (log/info (str "Flushed Cache! Requester's map:" req))
                    "OK!")
                "Fuck Off! Flushing too quickly is bad for your kidney!"))
+           (context "/upload" req (filew/wrap-file req "upload"))
            (route/not-found (notfound)))
