@@ -55,6 +55,6 @@
   (article/flush-cache))
 
 (defn -main []
-  (flush)
+  (flush-cache)
   (start-server))
 
