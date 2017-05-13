@@ -13,3 +13,5 @@ articles/
 cfg/
 upload/
 !/resources/cfg/
+/github-pages/
+

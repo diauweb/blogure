@@ -13,4 +13,5 @@
   :plugins [[lein-ring "0.9.7"]]
   :main xiaodai.blogure.core
   :ring {:handler xiaodai.blogure.core/app}
-  :aot [xiaodai.blogure.core])
+  ;:aot [xiaodai.blogure.core]
+  )

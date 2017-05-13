@@ -15,7 +15,7 @@
            (java.io File))
   (:gen-class))
 
-(def ^:const version "1.0.5 b170409-A")
+(def ^:const version "1.1.0 b170501-A")
 
 (log/info (str "Blogure, version" version))
 (log/info (str "#### Xiaodai Present ####"))
@@ -44,18 +44,17 @@
 
 (selmer.filters/add-filter! :deref #(deref %))
 
-; TODO Remove after development
-(selmer.parser/cache-off!)
-
-(def server (atom nil))
-
 (defn- start-server []
   (let [cfg (cfg/read-cfg "cfg/main.cfg.json")
         host (:host cfg)
         port (:port cfg)]
-    (reset! server (jetty/run-jetty app {:host host :port port}))))
+    (jetty/run-jetty app {:host host :port port})))
 
-(article/add-new-meta!)
-(article/flush-cache)
+(defn- flush-cache []
+  (article/add-new-meta!)
+  (article/flush-cache))
 
-(defn -main [] (start-server))
+(defn -main []
+  (flush)
+  (start-server))
+
