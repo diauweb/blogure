@@ -1,5 +1,7 @@
 # Blogure
 
+My first Clojure study-in-use project. 
+
 Blogure is an open-source blogging system written in Clojure. It is designed for out-of-box experience.
 It has no database needed, and can be compiled into a single file.
 
@@ -36,5 +38,5 @@ Then just enjoy it.
 
 ## License
 
-Copyright © 2017 Xiaodai Studio.
-You can redistribute and modify this as you like, but no commerical use.
+Copyright © 2017 Xiaodai.
+You can redistribute and modify this as you like, but without commerical use.
